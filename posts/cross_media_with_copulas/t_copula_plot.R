@@ -1,4 +1,6 @@
 library(mnormt)
+library(RColorBrewer)
+my_palette =   colorRampPalette(c("white", "orchid", "mediumorchid", "purple", "black"))(101)
 
 k=3
 r=.5
@@ -18,7 +20,8 @@ yhist <- hist(X[,2], plot=FALSE)
 top <- max(c(xhist$density, yhist$density,dnorm(0)))
 nf <- layout(matrix(c(2,0,1,3),2,2,byrow=TRUE), c(3,1), c(1,3), TRUE)
 par(mar=c(3,3,1,1))
-image(vx,vy,z,col=rev(heat.colors(101)))
+#image(vx,vy,z,col=rev(heat.colors(101)))
+image(vx,vy,z,col=my_palette)
 contour(vx,vy,z,col="blue",add=TRUE)
 points(X,cex=.2)
 par(mar=c(0,3,1,1))

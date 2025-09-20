@@ -17,7 +17,7 @@ format:
       light: cosmo
       dark: solar
     css: styles.css
-    highlight-style: eiffel
+    highlight-style: eiffel  
 
 editor: visual
 
